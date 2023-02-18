@@ -9,15 +9,18 @@ class Stack {
 		int capacity;  //size of array.
 		int numItems;
 	public:
-		// write a constructor that will initialize an array of capacity x
-		// add a default capacity of 5
-		// be sure to set the initial number of items to zero
+		// write a constructor that will have one input parameter x, with a default value of 5
+			// use x as the initial value for capacity attribute
+			// initialize a new array with the number of elements equal to the current capacity attribute
+				// the new array will be accessed using the "items" pointer
+			// be sure to set the initial number of items to zero
 		Stack() {}
 
 		// implement a "push" method to add new strings to the stack
 		// be sure to update the number of items
 		// if the stack is full, output a message to the console
-		//     and increase the capacity by 5
+			// increase the capacity by 5
+			//  and **use dynamic allocation** to increase the capacity of the old items stack to the new capacity
 		void push(string inObj) {}
 
 		// implement a method to check if your stack is empty
@@ -26,7 +29,7 @@ class Stack {
 			return 0;
 		}
 
-		// implement a "pop" method remove the top item from stack
+		// implement a "pop" method to "remove" the top item from stack
 		// this function should return the removed item item
 		// dont forget to update the number of items
 		// if your stack is empty, do nothing
@@ -47,14 +50,15 @@ class Stack {
 // Define the class BrowserHistory below
 class BrowserHistory {
 	private:
-		// One stacks of strings - this is all you need here
+		// One stacks of strings and the page you are currently viewing is all that is used here
 		Stack history;
+		string currentUrl;
 
 	public:
-		// Implement the constructor to begin your object
-		//    with a new current page at default_url
+		// Implement the constructor to initialize your object
+		//    with a new current page at defaultUrl
 		// At this point, your history should be empty
-		BrowserHistory(string default_url) {}
+		BrowserHistory(string defaultUrl) {}
 
 		// Implement the getCurrentPage method to return 
 		//    the most recently visited page
